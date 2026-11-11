@@ -1,0 +1,27 @@
+{
+  "name": "icloud-mail-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for iCloud Mail on Cloudflare Workers, with a local attachment CLI",
+  "scripts": {
+    "test": "bun test",
+    "dev": "wrangler dev --local-protocol https --https-cert-path .certs/localhost.pem --https-key-path .certs/localhost-key.pem",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc -p ."
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@cloudflare/workers-oauth-provider": "^1.2.4",
+    "@modelcontextprotocol/server": "^2.4.0",
+    "agents": "^0.33.0",
+    "imapflow": "^2.11.0",
+    "postal-mime": "^4.2.0",
+    "unpdf": "^2.1.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261108.1",
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.158.0"
+  }
+}
